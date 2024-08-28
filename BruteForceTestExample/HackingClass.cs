@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BruteForceTestExample
+﻿namespace BruteForceTestExample
 {
     public class HackingClass
     {
@@ -68,7 +61,7 @@ namespace BruteForceTestExample
                 if (count >= 3)
                 {
                     Console.Write($"\nToo many password attempts!\nWrite captcha \"{captchaString}\" to proceed....: ");
-                    string? attemptForCaptcha = Console.ReadLine();
+                    string attemptForCaptcha = Console.ReadLine() ?? "Empty string!";
                     CaptchaCheck(captchaString, attemptForCaptcha);
                     if (captchaCount < 3)
                     {
