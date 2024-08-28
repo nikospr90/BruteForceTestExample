@@ -33,7 +33,7 @@ namespace BruteForceTestExample_Test
             bool actual = hackingClass.CaptchaCheck(password, captcha);
 
             // Assert
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual); 
         }
     }
 }
