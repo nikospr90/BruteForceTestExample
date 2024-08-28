@@ -78,7 +78,7 @@ namespace BruteForceTestExample
                 if (count >= 3)
                 {
                     Console.Write($"\nToo many password attempts!\nWrite captcha \"{captchaString}\" to proceed....: ");
-                    string attemptForCaptcha = Console.ReadLine();
+                    string? attemptForCaptcha = Console.ReadLine();
                     CaptchaCheck(captchaString, attemptForCaptcha);
                     if (captchaCount < 3)
                     {
