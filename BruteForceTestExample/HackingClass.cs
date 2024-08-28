@@ -9,24 +9,14 @@ namespace BruteForceTestExample
 {
     public class HackingClass
     {
-        String current = "";
+        string current = "";
 
         int[] pos = { 0, 0, 0, 0, 0, 0 };
 
-        String[] alphabet = { "", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "å", "ä", "ö" };
+        string[] alphabet = { "", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "å", "ä", "ö" };
 
         int count = 0;
         int captchaCount = 0;
-
-
-        public string GenerateCaptcha()
-        {
-            byte[] captchaBytes = new byte[4];
-            RandomNumberGenerator rnd = RandomNumberGenerator.Create();
-            rnd.GetBytes(captchaBytes);
-            string captchaString = Convert.ToBase64String(captchaBytes);
-            return captchaString;
-        }
 
         public bool CaptchaCheck(string captchaString, string attemptForCaptcha)
         {
